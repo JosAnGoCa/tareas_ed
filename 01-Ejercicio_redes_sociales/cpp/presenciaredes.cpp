@@ -195,7 +195,3 @@ int main(){
     cout << "Promedio de crecimiento de los seguidores (enero - junio) de facebook: " << promedio_facebook << '\n';
 
 }
-
-
-
-
