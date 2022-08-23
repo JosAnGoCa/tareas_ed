@@ -37,7 +37,7 @@ promedio_facebook = 0
 
 
 for dato in range( len(data["RED SOCIAL"])):
-    if data["RED SOCIAL"][dato] == "TWITTER" and "SEGUIDORES" in data["CONCEPTO"][dato]:
+    if data["RED SOCIAL"][dato] == "TWITTER" and "CRECIMIENTO DE FOLLOWERS" in data["CONCEPTO"][dato]:
         promedio_twitter += int((data["ENERO"][dato]).replace(",",""))
         promedio_twitter += int((data["FEBRERO"][dato]).replace(",",""))
         promedio_twitter += int((data["MARZO"][dato]).replace(",",""))
@@ -47,7 +47,7 @@ for dato in range( len(data["RED SOCIAL"])):
         print("suma twitter:",promedio_twitter)
         promedio_twitter = round(promedio_twitter / 6)
 
-    if data["RED SOCIAL"][dato] == "FACEBOOK" and "SEGUIDORES" in data["CONCEPTO"][dato]:
+    if data["RED SOCIAL"][dato] == "FACEBOOK" and "CRECIMIENTO (seguidores)" in data["CONCEPTO"][dato]:
         promedio_facebook += int((data["ENERO"][dato]).replace(",",""))
         promedio_facebook += int((data["FEBRERO"][dato]).replace(",",""))
         promedio_facebook += int((data["MARZO"][dato]).replace(",",""))

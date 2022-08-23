@@ -52,6 +52,7 @@ int main(){
     vector<fila> content;
     vector<string> row;
     string line, word, extraWord;
+    string indice_meses[] = {"ENERO", "FEBRERO", "MARZO", "ABRIL", "MAYO", "JUNIO"};
 
     fstream file ("presenciaredes.csv", ios::in);
     if(file.is_open()) {
@@ -87,18 +88,17 @@ int main(){
 
     int mes1, mes2;
     cout << "Indice de los meses:" << '\n';
-    cout << "  1 - ENERO" << '\n';
-    cout << "  2 - FEBRERO" << '\n';
-    cout << "  3 - MARZO" << '\n';
-    cout << "  4 - ABRIL" << '\n';
-    cout << "  5 - MAYO" << '\n';
-    cout << "  6 - JUNIO" << '\n';
+    for(size_t i = 0; i < size(indice_meses); i++) {
+        cout << "  " << i+1 << " - " << indice_meses[i] << '\n';
+    }
 
     cout << "Introduce el indice de los meses que quieres comparar las visualizaciones de youtube:" << '\n';
     cout << "Mes 1: ";
     cin >> mes1;
+    mes1--;
     cout << "Mes 2: ";
     cin >> mes2;
+    mes2--;
 
     if (mes1 > mes2) {
         cout << "El mes 1 no puede ser mayor que el mes 2" << '\n';
@@ -106,64 +106,50 @@ int main(){
         for(int i = 0; i < content.size(); i++) {
             if(content[i].redSocial == "YOUTUBE" && content[i].concepto.find("VISUALIZACIONES") != std::string::npos) {
                 int vistas_mes_1, vistas_mes_2, diferencia_vistas;
-                string nombre_mes_1, nombre_mes_2;
+                string nombre_mes_1 = indice_meses[mes1], nombre_mes_2 = indice_meses[mes2];
                 switch (mes1) {
                     case 1:
-                        nombre_mes_1 = "ENERO";
                         vistas_mes_1 = content[i].enero;
                         break;
                     case 2:
-                        nombre_mes_1 = "FEBRERO";
                         vistas_mes_1 = content[i].febrero;
                         break;
                     case 3:
-                        nombre_mes_1 = "MARZO";
                         vistas_mes_1 = content[i].marzo;
                         break;
                     case 4:
-                        nombre_mes_1 = "ABRIL";
                         vistas_mes_1 = content[i].abril;
                         break;
                     case 5:
-                        nombre_mes_1 = "MAYO";
                         vistas_mes_1 = content[i].mayo;
                         break;
                     case 6:
-                        nombre_mes_1 = "JUNIO";
                         vistas_mes_1 = content[i].junio;
                         break;
                     default:
-                        nombre_mes_1 = "ENERO";
                         vistas_mes_1 = content[i].enero;
                         break;
                 }
                 switch (mes2) {
                     case 1:
-                        nombre_mes_2 = "ENERO";
                         vistas_mes_2 = content[i].enero;
                         break;
                     case 2:
-                        nombre_mes_2 = "FEBRERO";
                         vistas_mes_2 = content[i].febrero;
                         break;
                     case 3:
-                        nombre_mes_2 = "MARZO";
                         vistas_mes_2 = content[i].marzo;
                         break;
                     case 4:
-                        nombre_mes_2 = "ABRIL";
                         vistas_mes_2 = content[i].abril;
                         break;
                     case 5:
-                        nombre_mes_2 = "MAYO";
                         vistas_mes_2 = content[i].mayo;
                         break;
                     case 6:
-                        nombre_mes_2 = "JUNIO";
                         vistas_mes_2 = content[i].junio;
                         break;
                     default:
-                        nombre_mes_2 = "ENERO";
                         vistas_mes_2 = content[i].enero;
                         break;
                 }
@@ -179,12 +165,12 @@ int main(){
     int promedio_twitter = 0, promedio_facebook;
 
     for(int i = 0; i < content.size(); i++) {
-        if(content[i].redSocial == "TWITTER" && content[i].concepto.find("SEGUIDORES") != std::string::npos) {
+        if(content[i].redSocial == "TWITTER" && content[i].concepto.find("CRECIMIENTO DE FOLLOWERS") != std::string::npos) {
             promedio_twitter = content[i].enero + content[i].febrero + content[i].marzo + content[i].abril + content[i].mayo + content[i].junio;
             cout << "suma twitter: " << promedio_twitter << '\n';
             promedio_twitter = int(promedio_twitter / 6);
         }
-        if(content[i].redSocial == "FACEBOOK" && content[i].concepto.find("SEGUIDORES") != std::string::npos) {
+        if(content[i].redSocial == "FACEBOOK" && content[i].concepto.find("CRECIMIENTO (seguidores)") != std::string::npos) {
             promedio_facebook = content[i].enero + content[i].febrero + content[i].marzo + content[i].abril + content[i].mayo + content[i].junio;
             cout << "suma facebook: " << promedio_facebook << '\n';
             promedio_facebook = int(promedio_facebook / 6);
