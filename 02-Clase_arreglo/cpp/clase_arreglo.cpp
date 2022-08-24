@@ -7,46 +7,47 @@ class Arreglo {
     private:
         T *data;
         int size;
+
     public:
-        friend std::ostream& operator<<(std::ostream& os, const Arreglo<T>& a){
+        friend std::ostream& operator<<(std::ostream& os, const Arreglo<T>& arreglo){
             os << "[";
-            for(int i = 0; i < a.size-1; i++) {
-                os << a.data[i] << ", ";
+            for(int i = 0; i < arreglo.size-1; i++) {
+                os << arreglo.data[i] << ", ";
             }
-            os << a.data[a.size-1] << "]";
+            os << arreglo.data[arreglo.size-1] << "]";
             return os;
         }
 
         Arreglo(int size) {
             this->size = size;
-            data = new T[size];
+            this->data = new T[size];
         }
 
         ~Arreglo() {
-            delete[] data;
+            delete[] this->data;
         }
 
         T getItem(int index) {
-            if(index >= size || index < 0) {
+            if(index >= this->size || index < 0) {
                 throw out_of_range("Invalid index, out of bounds");
             }
-            return data[index];
+            return this->data[index];
         }
 
         void setItem(int index, T value) {
-            if(index >= size || index < 0) {
+            if(index >= this->size || index < 0) {
                 throw out_of_range("Invalid index, out of bounds");
             }
             data[index] = value;
         }
 
         int getLength() {
-            return size;
+            return this->size;
         }
 
         void clear(T value) {
-            for(int i = 0; i < size; i++) {
-                data[i] = value;
+            for(int i = 0; i < this->size; i++) {
+                this->data[i] = value;
             }
         }
 };
