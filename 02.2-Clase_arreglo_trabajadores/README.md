@@ -25,8 +25,23 @@ Ejercicio:
 
 ## Codigo
 
--   [Codigo en Java](./java/src/Arreglo.java)
--   [Codigo en C++](./cpp/clase_arreglo.cpp)
--   [Codigo en Python](./python/clase_arreglo.py)
+-   [Codigo en Java](./java/src/)
+    -   [Main](./java/src/Main.java)
+    -   [Arreglo](./java/src/Arreglo.java)
+    -   [Trabajador](./java/src/Trabajador.java)
+    -   [Nomina](./java/src/nominaADT.java)
+-   [Codigo en C++](./cpp/)
+    -   [Main](./cpp/main.cpp)
+    -   [Header Arreglo](./cpp/clase_arreglo.h)
+    -   [Codigo Arreglo](./cpp/clase_arreglo.cpp)
+    -   [Header Trabajador](./cpp/clase_trabajador.h)
+    -   [Codigo Trabajador](./cpp/clase_trabajador.cpp)
+    -   [Header Nomina](./cpp/clase_nomina.h)
+    -   [Codigo Nomina](./cpp/clase_nomina.cpp)
+-   [Codigo en Python](./python/)
+    -   [Main](./python/main.py)
+    -   [Arreglo](./python/clase_arreglo.py)
+    -   [Trabajador](./python/clase_trabajador.py)
+    -   [Nomina](./python/clase_nomina.py)
 
 \- JosAnGoCa
