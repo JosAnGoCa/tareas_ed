@@ -8,3 +8,4 @@ Repositorio creado con la finalidad de contener todas las tareas que se realizen
 
 -   [01-Ejercicio Redes Sociales](./01-Ejercicio_redes_sociales/README.md)
 -   [02-Clase arreglo](./02-Clase_arreglo/README.md)
+-   [02.2-Clase arreglo trabajadores](./02.2-Clase_arreglo_trabajadores/README.md)
