@@ -5,16 +5,16 @@ import java.io.IOException;
 
 import static java.lang.Integer.parseInt;
 
-public class nominaADT {
+public class Nomina {
     private String nombreCompania;
     private Arreglo<Trabajador> empleados;
     private String rutaArchivo;
     public static String SEPARADOR_SALTO_DE_LINEA = "\n";
     public static String SEPARADOR_COMA = ",";
 
-    public nominaADT(){}
+    public Nomina(){}
 
-    public nominaADT(String rutaArchivo, String nombreCompania) throws IOException {
+    public Nomina(String rutaArchivo, String nombreCompania) throws IOException {
         this.nombreCompania = nombreCompania;
         this.rutaArchivo = rutaArchivo;
         int contador = 0;
