@@ -12,8 +12,6 @@ public class Nomina {
     public static String SEPARADOR_SALTO_DE_LINEA = "\n";
     public static String SEPARADOR_COMA = ",";
 
-    public Nomina(){}
-
     public Nomina(String rutaArchivo, String nombreCompania) throws IOException {
         this.nombreCompania = nombreCompania;
         this.rutaArchivo = rutaArchivo;
