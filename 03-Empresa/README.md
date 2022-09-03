@@ -20,7 +20,7 @@ Deberán crear un ADT a partir del ADT Array que almacene la información de dic
     -   [Main](./java/src/Main.java)
     -   [Arreglo](./java/src/Arreglo.java)
     -   [Trabajador](./java/src/Trabajador.java)
-    -   [Nomina](./java/src/nominaADT.java)
+    -   [Nomina](./java/src/Nomina.java)
 -   [Codigo en C++](./cpp/)
     -   [Main](./cpp/main.cpp)
     -   [Header Arreglo](./cpp/clase_arreglo.h)
