@@ -1,5 +1,7 @@
 # 01-EJERCICIO REDES SOCIALES
 
+### **COMPAÑERO:** Si visitas este repositorio para usarlo de guía o solo para ver la forma en la que hice la tarea te agradecería que me sigas aqui en GitHub y le dieras una estrella a este repositorio.
+
 ## Instrucciones
 
 Hacer un programa que haga lo siguiente:

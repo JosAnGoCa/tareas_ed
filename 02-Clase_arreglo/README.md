@@ -1,5 +1,7 @@
 # 02-CLASE ARREGLO
 
+### **COMPAÑERO:** Si visitas este repositorio para usarlo de guía o solo para ver la forma en la que hice la tarea te agradecería que me sigas aqui en GitHub y le dieras una estrella a este repositorio.
+
 ## Instrucciones
 
 Crear una clase llamada **Arreglo** que tenga los siguientes métodos:
