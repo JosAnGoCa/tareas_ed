@@ -4,7 +4,7 @@ class Conjunto:
     def __init__(self):
         self.data = set()
 
-    def lenght(self):
+    def length(self):
         return len(self.data)
 
     def contains(self, value):
@@ -17,10 +17,10 @@ class Conjunto:
         self.data.remove(value)
 
     def equals(self, other):
-        if self.lenght() != other.lenght():
+        if self.length() != other.length():
             return False
 
-        for i in range(self.lenght()):
+        for i in range(self.length()):
             if not other.contains(self.data[i]):
                 return False
 
@@ -42,3 +42,18 @@ class Conjunto:
 
     def __str__(self):
         return str(self.data)
+
+    def __iter__(self):
+        return iterConjunto(self)
+
+
+class iterConjunto:
+    def __init__(self, conjunto):
+        self._conjunto = conjunto
+        self._index = 0
+
+    def __next__(self):
+        if self._index < self._conjunto.length():
+            self._index += 1
+            return self._conjunto.data[self._index - 1]
+        raise StopIteration
