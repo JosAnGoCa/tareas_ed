@@ -27,7 +27,7 @@ class Conjunto:
         return True
 
     def isSubset(self, other):
-        return (other.data.issubset(self.data))
+        return (self.data.issubset(other.data))
 
     def union(self, other):
         self.data = self.data.union(other.data)

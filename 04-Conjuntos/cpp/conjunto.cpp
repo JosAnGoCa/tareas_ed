@@ -47,11 +47,11 @@ bool Conjunto<T>::equals(Conjunto<T> *other) {
 
 template <typename T>
 bool Conjunto<T>::isSubset(Conjunto<T> *other) {
-    if(length() < other->length()) {
+    if(other->length() < length()) {
         return false;
     }
-    for(int i = 0; i < other->length(); i++) {
-        if(!contains(other->data[i])) {
+    for(int i = 0; i < length(); i++) {
+        if(!other->contains(data[i])) {
             return false;
         }
     }

@@ -34,11 +34,11 @@ public class Conjunto<T> implements Iterable<T>{
     }
 
     public boolean isSubset(Conjunto<T> other) {
-        if(length() < other.length()){
+        if(length() > other.length()){
             return false;
         }
-        for(int i = 0; i < other.length(); i++) {
-            if(!contains(other.data.get(i))) {
+        for(int i = 0; i < length(); i++) {
+            if(!other.contains(data.get(i))) {
                 return false;
             }
         }
