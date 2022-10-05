@@ -1,10 +1,10 @@
-# 04-Conjujntos
+# 04-CONJUNTOS
 
 ### **COMPAÑERO:** Si visitas este repositorio para usarlo de guía o solo para ver la forma en la que hice la tarea, te agradecería que me sigas aquí en GitHub y le dieras una estrella a este repositorio.
 
 ## Instrucciones
 
-Crear un proyecto en Java que tenga la clase ConjuntoADT con la siguiente estructura:
+Crear un proyecto que tenga la clase ConjuntoADT con la siguiente estructura:
 
 -   conjunto() -> Constructor
 -   length() -> Regresa el numero de elementos.
