@@ -23,10 +23,10 @@ Deberá contener una clase Main donde se ponga a prueba dicha estructura.
 
 ## Codigo
 
--   [Codigo en Java](./java/src/)
-    -   [Main](./java/src/Main.java)
-    -   [Nodo](./java/src/Node.java)
-    -   [Lista Ligada](./java/src/SimpleLinkedList.java)
+-   [Codigo en Java](./Java/src/)
+    -   [Main](./Java/src/Main.java)
+    -   [Nodo](./Java/src/Node.java)
+    -   [Lista Ligada](./Java/src/SimpleLinkedList.java)
 -   [Codigo en C++](./cpp/)
     -   [Main](./cpp/main.cpp)
     -   [Header Nodo](./cpp/node.h)
