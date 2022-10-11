@@ -1,4 +1,4 @@
-public class SimpleLinkedList<T> {
+public class SimpleLinkedList<T extends Comparable<T>> {
     private Node<T> head;
 
     public SimpleLinkedList() {
@@ -24,7 +24,7 @@ public class SimpleLinkedList<T> {
         int indexPosition = 0;
         Node<T> iteratorNode = head;
         while(iteratorNode != null){
-            if(iteratorNode.getData() == valor) {
+            if(valor.equals(iteratorNode.getData())) {
                 return indexPosition;
             }
             iteratorNode = iteratorNode.getNext();
@@ -57,7 +57,7 @@ public class SimpleLinkedList<T> {
         if(search(referencia) < 0) return;
 
         Node<T> iteratorNode = head;
-        while(iteratorNode.getNext() != null && iteratorNode.getData() != referencia){
+        while(iteratorNode.getNext() != null && !referencia.equals(iteratorNode.getData())){
             iteratorNode = iteratorNode.getNext();
         }
         Node<T> newNode = new Node<>(valor, iteratorNode.getNext());
@@ -107,7 +107,7 @@ public class SimpleLinkedList<T> {
         if(search(a_buscar) < 0) return;
 
         Node<T> iteratorNode = head;
-        while(iteratorNode != null && iteratorNode.getData() != a_buscar){
+        while(iteratorNode != null && !a_buscar.equals(iteratorNode.getData())){
             iteratorNode = iteratorNode.getNext();
         }
         if(iteratorNode.getData() != a_buscar) return;
