@@ -11,4 +11,4 @@ Repositorio creado con la finalidad de contener todas las tareas que se realizen
 -   [03-Empresa](./03-Empresa/README.md)
 -   [04-Conjuntos](./04-Conjuntos/README.md)
 -   [05-Lista Ligada Simple](./05-Lista_simplemente_ligada/README.md)
--   [05-Pila](./06-Pila/README.md)
+-   [06-Pila](./06-Pila/README.md)
