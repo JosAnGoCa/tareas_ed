@@ -22,6 +22,7 @@ public class StackNode<T> {
 
         T topValue = top.getData();
         top = top.getNext();
+        length--;
         return topValue;
     }
 
@@ -30,7 +31,6 @@ public class StackNode<T> {
             return null;
         }
 
-        length--;
         return top.getData();
     }
 
