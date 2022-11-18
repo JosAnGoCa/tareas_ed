@@ -1,0 +1,102 @@
+<?php 
+
+require_once dirname(__FILE__) . '/DBContext.php';
+use App\Util\DbContext;
+
+class ToDoListController{
+
+    //GUARDAR UNA TAREA EN LA LISTA
+    public function save($postdata){
+        try {
+            DbContext::initialize();
+            DbContext::generateSchema();
+            $qry = DbContext::getInstance()->prepare(
+                'INSERT INTO todolist (name, status) VALUES (?,?)'
+            );
+
+            $qry->execute([
+                $postdata->name,
+                "active"
+            ]);
+        } catch (PDOException $e) {
+            die($e->getMessage));
+        }
+    
+        return "OK";
+    }
+
+    //FINALIZAR UNA TAREA CON SU ID
+    public function finishTask($postdata){
+        try {
+            DbContext::initialize();
+            DbContext::generateSchema();
+            $qry = DbContext::getInstance()->prepare(
+                "UPDATE todolist SET status = 'done' WHERE id = '$postdata->id'"
+            );
+
+            $qry->execute();
+            $result = $qry->fetchAll(PDO::FETCH_OBJ);
+        } catch (PDOException $e) {
+            die($e->getMessage));
+        }
+    
+        return "OK";
+    }
+
+    //OBTENER LA LISTA DE TAREAS FINALIZADAS
+    public function getFinalizedList(){
+        try {
+            DbContext::initialize();
+            DbContext::generateSchema();
+            $qry = DbContext::getInstance()->prepare(
+                "SELECT * FROM todolist WHERE status = 'done'"
+            );
+
+            $qry->execute();
+            $result = $qry->fetchAll(PDO::FETCH_OBJ);
+        } catch (PDOException $e) {
+            die($e->getMessage));
+        }
+    
+        return json_encode($result);
+    }
+
+    //OBTENER LA LISTA DE TAREAS ACTIVAS
+    public function getActiveList(){
+        try {
+            DbContext::initialize();
+            DbContext::generateSchema();
+            $qry = DbContext::getInstance()->prepare(
+                "SELECT * FROM todolist WHERE status = 'active'"
+            );
+
+            $qry->execute();
+            $result = $qry->fetchAll(PDO::FETCH_OBJ);
+        } catch (PDOException $e) {
+            die($e->getMessage));
+        }
+    
+        return json_encode($result);
+    }
+
+    //OBTENER TODOS LOS ELEMENTOS DE LA LISTA
+    public function getAll(){
+        try {
+            DbContext::initialize();
+            DbContext::generateSchema();
+            $qry = DbContext::getInstance()->prepare(
+                'SELECT * FROM todolist'
+            );
+
+            $qry->execute();
+            $result = $qry->fetchAll(PDO::FETCH_OBJ);
+        } catch (PDOException $e) {
+            die($e->getMessage));
+        }
+    
+        return json_encode($result);
+    }
+
+}
+
+?>

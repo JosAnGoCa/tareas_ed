@@ -12,3 +12,4 @@ Repositorio creado con la finalidad de contener todas las tareas que se realizen
 -   [04-Conjuntos](./04-Conjuntos/README.md)
 -   [05-Lista Ligada Simple](./05-Lista_simplemente_ligada/README.md)
 -   [06-Pila](./06-Pila/README.md)
+    -   [06.1-Extra: Balanceo por parentesis](./06-Pila/README.md)
