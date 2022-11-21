@@ -4,7 +4,7 @@
 
 ## Instrucciones
 
-Crear un proyecto Java implemente una Clase para la estructura Pila. Debe contener los métodos que se encuentran descritos en las diapositivas.
+Crear un proyecto que implemente una Clase para la estructura Pila. Debe contener los métodos que se encuentran descritos en las diapositivas.
 
 - Stack() -> Constructor
 - isEmpty() -> ¿Está vacía?
