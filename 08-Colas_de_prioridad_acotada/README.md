@@ -1,4 +1,4 @@
-# 07-Cola
+# 08-Colas de prioridad acotadas
 
 ### **COMPAÑERO:** Si visitas este repositorio para usarlo de guía o solo para ver la forma en la que hice la tarea, te agradecería que me sigas aquí en GitHub y le dieras una estrella a este repositorio.
 
