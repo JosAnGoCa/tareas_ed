@@ -14,3 +14,4 @@ Repositorio creado con la finalidad de contener todas las tareas que se realizen
 -   [06-Pila](./06-Pila/README.md)
     -   [06.1-Extra: Balanceo por parentesis](./06_1-Balanceo_por_parentesis/README.md)
 -   [07-Cola](./07-Cola/README.md)
+-   [08-Colas de prioridad acotada](./08-Colas_de_prioridad_acotada/README.md)
