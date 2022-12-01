@@ -15,8 +15,8 @@ Deberá contener una clase Main donde se ponga a prueba dicha estructura.
 
 ## Codigo
 
-- [Codigo en Java](./java/src/)
-  - [Main](./java/src/Main.java)
-  - [HashTable](./java/src/HashTable.java)
+- [Codigo en Java](./Java/src/)
+  - [Main](./Java/src/Main.java)
+  - [HashTable](./Java/src/HashTable.java)
 
 \- JosAnGoCa
