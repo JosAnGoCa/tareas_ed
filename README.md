@@ -16,4 +16,4 @@ Repositorio creado con la finalidad de contener todas las tareas que se realizen
 -   [07-Cola](./07-Cola/README.md)
 -   [08-Colas de prioridad acotada](./08-Colas_de_prioridad_acotada/README.md)
 -   [09-Tabla hash](./09-Tabla_Hash/README.md)
--   [09-Proyecto final](./10-Java_Collections/README.md)
+-   [10-Proyecto final](./10-Java_Collections/README.md)
